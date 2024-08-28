@@ -1,0 +1,12 @@
+<div class="eaLauncher-ApplicationList-group {{#if color}}eaLauncher-ApplicationList-group-borderColor{{/if}} {{#if ordered}}eaLauncher-ApplicationList-group_ordered{{/if}}"
+     {{#if color}}style="border-left-color: {{color}}" {{/if}}>
+{{#if name}}
+<div class="eaLauncher-ApplicationList-group-header">
+    {{#if icon}}
+    <div class="eaLauncher-ApplicationList-group-iconHolder"><i class="ebIcon ebIcon_large eaLauncher-ApplicationList-group-icon eaLauncher-ApplicationList-group-{{icon}}Icon"></i></div>
+    {{/if}}
+    <div class="eaLauncher-ApplicationList-group-headerText">{{{name}}}</div>
+</div>
+{{/if}}
+<div class="eaLauncher-ApplicationList-group-content"></div>
+</div>

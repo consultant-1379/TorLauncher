@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Launcher-AppInfo">
+    <title>About</title>
+    <conbody>
+        <section>
+            <title>Application Details</title>
+            <dl>
+                <dlentry id="appName">
+                    <dt>App Name</dt>
+                    <dd>Application Launcher</dd>
+                </dlentry>
+                <dlentry id="productNumber">
+                    <dt>Product Number</dt>
+                    <dd>CNA4033102</dd>
+                </dlentry>
+                <dlentry id="version">
+                    <dt>Version</dt>
+                    <dd>{{version}}</dd>
+                </dlentry>
+                <dlentry id="link">
+                    <dt>App Link</dt>
+                    <dd>#launcher</dd>
+                </dlentry>
+            </dl>
+        </section>
+    </conbody>
+</concept>

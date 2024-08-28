@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.2/os/dtd1.2/technicalContent/dtd/concept.dtd">-->
+<!--<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "../../base/dtd/concept.dtd">-->
+<concept id="Launcher-Tutorial01">
+    <title>Tutorials</title>
+    <conbody>
+        <section>
+            <title>Mark or unmark an application as a favorite</title>
+            <p>
+                The application list contains all the applications you have access to. To launch an application, click
+                its name. Next to each application is a <image href="../resources/images/fav-star-black-16x16.svg" alt="Favorite icon"/> icon.
+                Click <image href="../resources/images/fav-star-black-16x16.svg" alt="Favorite icon"/> to mark or unmark the application as a favorite.
+                The application can then be launched from the favorites section in the action bar.
+            </p>
+        </section>
+    </conbody>
+
+</concept>

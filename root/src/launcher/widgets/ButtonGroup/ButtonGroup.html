@@ -1,0 +1,11 @@
+<div class="eaLauncher-ButtonGroup">
+    <div class="ebBtnGroup">
+        {{#each items}}
+        <label>
+            <input type="radio" value="{{value}}" name="btngrpradio" {{#if selected}}checked="checked" {{/if}}
+            class="eaLauncher-ButtonGroup-radio-{{value}}">
+            <span class="ebBtn">{{label}}</span>
+        </label>
+        {{/each}}
+    </div>
+</div>

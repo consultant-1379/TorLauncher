@@ -1,0 +1,45 @@
+.eaLauncher-Search {
+
+  position: relative;
+
+  &-input {
+    width: 100%;
+  }
+
+  &-cancel {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    line-height: 22px;
+
+    &_visible_true {
+      display: block;
+    }
+  }
+
+  &-results {
+    position: absolute;
+    top: 36px;
+    right: 5px;
+    left: 5px;
+    background: #fff;
+    z-index: 500;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: none;
+
+    &:focus {
+      outline: none;
+    }
+    &_highlighted_true {
+      display: block;
+    }
+  }
+
+}

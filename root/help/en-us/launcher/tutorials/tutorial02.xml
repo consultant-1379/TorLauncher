@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.2/os/dtd1.2/technicalContent/dtd/concept.dtd">-->
+<!--<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "../../base/dtd/concept.dtd">-->
+<concept id="Launcher-Tutorial02">
+    <title>Tutorials</title>
+    <conbody>
+        <section>
+            <title>The Information icon</title>
+            <p>
+                The application list contains all the applications you have access to. Next to each application is a
+                <image href="../resources/images/info-black-16x16.svg" alt="Info icon"/> icon.
+                Click <image href="../resources/images/info-black-16x16.svg" alt="Info icon"/> to get more information on the application.
+            </p>
+        </section>
+    </conbody>
+
+</concept>

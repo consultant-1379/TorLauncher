@@ -1,0 +1,115 @@
+.applyBorderRadius(@params) {
+  border-radius: @params;
+}
+
+.applyBoxShadow(@param) {
+  box-shadow: @param;
+}
+
+.applyBackgroundClip(@param) {
+  background-clip: @param;
+}
+
+.eaLauncher-Tooltip {
+  position: absolute;
+  left: -20px;
+  bottom: 100%;
+  top: auto;
+  margin-top: 0;
+  margin-bottom: 3px;
+  width: 362px;
+  box-sizing: border-box;
+
+  background-color: #fff;
+  border: 1px solid #999;
+  min-height: 32px;
+
+  .applyBorderRadius(4px);
+  .applyBoxShadow(~'0 1px 3px rgba(0, 0, 0, .2)');
+  .applyBackgroundClip(~'padding-box');
+
+  &-closeButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    opacity: .4;
+    width: 16px;
+    height: 16px;
+    background-image: url('@{current-url}/close_black.svg');
+
+    &:hover {
+      cursor: pointer;
+      opacity: .8;
+    }
+  }
+
+  &-arrowShadow {
+    border-color: #ccc transparent transparent transparent;
+    border-style: solid;
+    border-width: 11px 11px 0 11px;
+    height: 0;
+    width: 0;
+    position: absolute;
+    bottom: -12px;
+    left: 24px;
+    opacity: .5;
+    box-sizing: border-box;
+  }
+  &-arrowBorder {
+    border-color: #999 transparent transparent transparent;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    height: 0;
+    width: 0;
+    position: absolute;
+    bottom: -10px;
+    left: 25px;
+    box-sizing: border-box;
+  }
+  &-arrow {
+    border-color: #fff transparent transparent transparent;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    height: 0;
+    width: 0;
+    position: absolute;
+    bottom: -9px;
+    left: 25px;
+    box-sizing: border-box;
+  }
+
+  &_shownBottom_true {
+    top: 100%;
+    bottom: auto;
+    margin-top: 3px;
+    margin-bottom: 0;
+
+    .eaLauncher-Tooltip-arrowShadow {
+      border-width: 0 11px 11px 11px;
+      display: none;
+    }
+    .eaLauncher-Tooltip-arrowBorder {
+      border-color: transparent transparent #999 transparent;
+      border-width: 0 10px 10px 10px;
+      bottom: auto;
+      top: -10px;
+    }
+    .eaLauncher-Tooltip-arrow {
+      border-color: transparent transparent #fff transparent;
+      border-width: 0 10px 10px 10px;
+      bottom: auto;
+      top: -9px;
+    }
+  }
+
+  &_tooltipHidden_true {
+    display: none;
+  }
+
+  &-contentText {
+    margin: 25px 25px 20px 20px;
+    color: #666;
+    font-size: 1.3rem;
+  }
+
+}

@@ -1,0 +1,17 @@
+<div class="eaLauncher-ListItem" tabindex="0">
+    <div class="eaLauncher-ListItem-linkHolder">
+        {{#if data.shortInfo}}
+        <i class="eaLauncher-ListItem-infoIcon" title="{{i18n.showInfo}}" data-title="{{data.shortInfo}}"></i>
+        {{/if}}
+        <i class="eaLauncher-ListItem-favIcon" title="{{i18n.toggleFavorite}}"></i>
+        <a href="{{data.uri}}" class="eaLauncher-ListItem-label" tabindex="-1">
+            {{~{data.name}~}}
+            {{~#if data.acronym~}}
+            <span class="eaLauncher-ListItem-acronym"> ({{{data.acronym}}})</span>
+            {{~/if~}}
+            <span class="eaLauncher-ListItem-externalIcon eaLauncher-ListItem-externalIcon_hidden">
+                <i class="ebIcon ebIcon_externalApp"></i>
+            </span>
+        </a>
+    </div>
+</div>

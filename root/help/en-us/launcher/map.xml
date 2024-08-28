@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map id="Launcher-Navigation">
+    <topicref href="overview.xml" navtitle="Overview" type="concept" />
+    <topicref href="ui.xml" navtitle="User Interface" type="concept" />
+    <topicref href="info.xml" navtitle="About" type="concept" />
+</map>

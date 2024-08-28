@@ -1,0 +1,58 @@
+{
+  "title": "Application Launcher",
+  "views": {
+    "az": "A - Z",
+    "category": "Categories",
+    "favorites": "Favorites"
+  },
+  "search": "Search for an application",
+  "unableContactServer": "Unable to Contact Server",
+  "tryAgainLater": "Please try again later.",
+  "ok": "OK",
+  "showInfo": "Show Info",
+  "toggleFavorite": "Toggle Favorite",
+  "launchApp": "Launch <app>",
+  "noFavoritesHeader": "Oops, you don't have any favorites.",
+  "noFavoritesMessage": "To add an application to your Favorites list, click the star (*) next to the application's name.\nTo remove an application from your Favorites list, click the star again.",
+  "feature": "Feature",
+  "sideRegion": {
+    "helpTitle": "Help Center",
+    "tutorial": {
+      "title": "Network Management Tutorials"
+    }
+  },
+  "carousel": {
+    "alarmMonitor": {
+      "title": "Alarm Monitor",
+      "subtitle": "View all open alarms in your network."
+    },
+    "kpiManagement": {
+      "title": "KPI Management",
+      "subtitle": "Create and manage user defined KPIs."
+    },
+    "pmICListSubscription": {
+      "title": "PM Initiation and Collection",
+      "subtitle": "Initiate and collect PM counters and events."
+    }
+  },
+  "categories": {
+    "monitoring": {
+      "name": "Monitoring"
+    },
+    "provisioning": {
+      "name": "Provisioning"
+    },
+    "documentation": {
+      "name": "Documentation"
+    },
+    "performance_and_optimisation": {
+      "name": "Performance and Optimization"
+    },
+    "security": {
+      "name": "Security"
+    },
+    "system": {
+      "name": "System"
+    }
+  }
+}

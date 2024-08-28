@@ -1,0 +1,25 @@
+{
+    "parent": "$(parentJson)/app.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "systemidentifier",
+        "name": "Systemidentifier",
+        "version": "1.0.0",
+        "skeleton": "2.3.0",
+        "skeletonType": "app"
+    },
+    "phases": {
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "test",
+                "compile",
+                "compress"
+            ]
+        }
+    },
+    "dependencies": {
+        "clientsdk": "1.66.2"
+    }
+}

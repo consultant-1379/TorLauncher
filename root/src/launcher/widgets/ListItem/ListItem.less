@@ -1,0 +1,167 @@
+.eaLauncher-ListItem {
+  position: relative;
+  margin: 0 0 0 0;
+  line-height: 2rem;
+  display: inline-block;
+  width: 33%;
+
+  &:hover, &_info_true {
+    background-color: #ebebeb;
+  }
+
+  &:focus {
+    z-index: 3;
+    outline: none;
+  }
+
+  &_selected_true, &_focused {
+    background: #f0eff0;
+
+    .eaLauncher-ListItem-favIcon {
+      display: block;
+    }
+
+    .eaLauncher-ListItem-infoIcon {
+      display: block;
+    }
+  }
+
+  &_selected_true {
+    z-index: 2;
+  }
+
+  &_search {
+    display: block;
+    width: 100%;
+  }
+
+  &-highlight {
+    color: #0066b3;
+    font-weight: bold;
+  }
+
+  &-linkHolder {
+    padding: 7px 0 7px 54px;
+  }
+
+  &-favIcon {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 22px;
+    width: 32px;
+    background: url('@{current-url}/black_star.svg') center center no-repeat;
+    background-size: 16px 16px;
+    opacity: .2;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &_favorited_true {
+      display: block;
+      background-image: url('@{current-url}/yellow_star.svg');
+      opacity: 1;
+    }
+  }
+
+  &-label {
+    font-size: 1.3rem;
+    padding: 10px 0;
+
+    &:focus {
+      outline: none;
+      text-decoration: underline;
+    }
+  }
+
+  &_search {
+    .eaLauncher-ListItem-label {
+      color: #000;
+    }
+  }
+
+  &-acronym {
+    font-size: 1rem;
+    color: #999;
+  }
+
+  &-infoIcon {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 32px;
+    background: url('@{current-url}/black_info.svg') center center no-repeat;
+    background-size: 16px 16px;
+    opacity: .2;
+    display: none;
+
+    &:hover, &_clicked_true {
+      opacity: 1;
+    }
+  }
+
+  &-externalIcon {
+    position: absolute;
+    margin-left: 8px;
+    visibility: hidden;
+
+    &_hidden {
+      display: none;
+    }
+  }
+
+  &:hover, &:focus {
+
+    color: rgba(0, 102, 179, .8);
+    text-decoration: underline;
+
+    .eaLauncher-ListItem-favIcon {
+      display: block;
+    }
+
+    .eaLauncher-ListItem-infoIcon {
+      display: block;
+    }
+
+    .eaLauncher-ListItem-externalIcon {
+      visibility: visible;
+    }
+  }
+
+  &-highlight {
+    color: #0066b3;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .eaLauncher-ListItem:not(.eaLauncher-ListItem_search) {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 986px) {
+  .eaLauncher-ListItem:not(.eaLauncher-ListItem_search) {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .eaLauncher-ListItem:not(.eaLauncher-ListItem_search) {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .eaLauncher-ListItem:not(.eaLauncher-ListItem_search) {
+    width: 100%;
+  }
+}

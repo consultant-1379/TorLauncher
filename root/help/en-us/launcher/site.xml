@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<site>
+    <title>Application Launcher</title>
+    <homeTitle>Home</homeTitle>
+    <home>
+        <blocks>
+            <block color="flat_darkGreen" href="overview.xml">
+                <title>Overview</title>
+                <desc></desc>
+            </block>
+            <block color="flat_green" href="ui.xml">
+                <title>User Interface</title>
+                <desc></desc>
+            </block>
+        </blocks>
+    </home>
+</site>

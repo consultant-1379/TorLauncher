@@ -1,0 +1,14 @@
+.idea/
+tor-launcher/node_modules/
+target/
+tmp/
+build/
+*.iml
+*.sublime-project
+*.sublime-workspace
+#.gitignore
+node_modules/
+root/data.json
+
+# We should not commit npm debug logs
+npm-debug.log

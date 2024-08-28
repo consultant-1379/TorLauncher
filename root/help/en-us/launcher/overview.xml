@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Launcher-Overview">
+    <title>Overview</title>
+    <conbody>
+        <!--<p>-->
+        <!--The Application Launcher lists the applications you have access to. To launch an-->
+        <!--application, simply click its name. If you have access to a lot of applications but only use a small number-->
+        <!--of these regularly, you can mark any application as a favorite. To get more information on any application,-->
+        <!--click the <image href="resources/images/info-black-16x16.svg" alt="Info icon"/> icon next to its name.-->
+        <!--</p>-->
+        <p>
+            The ENM Application Launcher lists all the ENM applications you can access. To launch an application, click
+            the application name.
+            You can mark applications which you access and use regularly as a favourite by clicking the
+            <image href="resources/images/fav-star-yellow-16x16.svg" alt="Favourite icon"/>
+            icon.
+
+            To get more information on an application, hover over the application tile, and click the
+            <image href="resources/images/info-black-16x16.svg" alt="Info icon"/>.
+            A short description of the application is displayed.
+        </p>
+        <p>
+            Some applications are opened in a new tab. These application have the
+            <image href="resources/images/externalApp_black_16px.svg"/>
+            icon displayed next to them. Click the icon open the application in a new tab.
+        </p>
+        <p>Individual Help Applications offer comprehensive contextual online help content</p>
+    </conbody>
+</concept>

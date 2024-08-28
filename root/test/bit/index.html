@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BIT tests</title>
+    <link type="text/css" rel="stylesheet" href="../../.cdt/assets/css/assets.css">
+    <script src="../../_tools/index.js"></script>
+    <script src="../../.cdt/require.config.js"></script>
+    <script>
+        loadTestDependencies({
+            requireConfig: {
+                baseUrl: "../../src",
+                i18n: {
+                    localesDir: "../../locales",
+                    locales: ["en-us"]
+                },
+                paths: {
+                    "test": "../test"
+                }
+            },
+            tests: [
+                "suites/Launcher",
+                "suites/SideRegion",
+                "suites/ActionBarRegion",
+                "suites/ContentRegion",
+                "suites/ErrorDialogRegion",
+                "suites/SearchField",
+                "suites/ButtonGroup",
+                "suites/ListItem",
+                "suites/ApplicationList",
+                "suites/LocationService",
+                "suites/AppsService"
+            ]
+        });
+
+        var fakeLocationBar;
+        window.onload = function () {
+            fakeLocationBar = document.getElementById('document-location');
+            fakeLocationBar.textContent = location.href;
+        };
+        window.onhashchange = function (event) {
+            fakeLocationBar.textContent = event.newURL;
+        };
+
+        function restoreWindow() {
+            var target = document.querySelector('#window');
+            appendClass(target, 'restore');
+        }
+        function appendClass(_target, _className) {
+            var matcher = new RegExp('(?:^|\\s)' + _className + '(?!\\S)', 'g');
+            _target.className += _target.className.match(matcher) ? '' : _className;
+        }
+        function minimiseWindow() {
+            var target = document.querySelector('#window');
+            removeClass(target, 'restore');
+        }
+        function removeClass(_target, _className) {
+            var matcher = new RegExp('(?:^|\\s)' + _className + '(?!\\S)', 'g');
+            _target.className = _target.className.replace(matcher, '');
+        }
+    </script>
+    <style>
+        #window {
+            position: fixed;
+            right: 64px;
+            top: 64px;
+            width: 1024px;
+            min-height: 576px;
+            border: 3px solid #ddd;
+            outline: none;
+            box-shadow: 0px 4px 6px #ddd;
+            opacity: 0.75;
+            transform-origin: top right;
+            transform: scale(0.2, 0.2);
+            transition: all .2s ease-in-out;
+            z-index: 1;
+            visibility: visible; /* debug */
+        }
+
+        #window:hover,
+        #window.restore {
+            box-shadow: 0px 4px 6px #000;
+        }
+
+        #window:focus {
+            outline: 4px solid blue;
+        }
+
+        #window.restore {
+            background-clip: padding-box;
+            border-radius: 3px;
+            border: 4px solid rgba(153, 153, 255, 0.85);
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        #window.restore:focus {
+            border: 4px solid rgba(153, 153, 255, 0.95);
+            outline: none;
+        }
+
+        #document-header {
+            border: rgba(153, 153, 255, 0.85) solid 2px;
+        }
+
+        #document-title {
+            height: 30px;
+            line-height: 30px;
+            padding-left: 12px;
+            background-clip: padding-box;
+            background-color: rgba(153, 153, 255, 0.85);
+            font-size: 0.7em;
+            font-weight: 600;
+            color: white;
+        }
+
+        #window.restore:focus #document-title,
+        #window.restore:focus #document-hide {
+            text-shadow: 0px 1px 2px #000;
+        }
+
+        #document-hide {
+            position: absolute;
+            top: 1px;
+            right: 8px;
+            color: white;
+            cursor: pointer;
+            opacity: 0;
+        }
+
+        #window.restore #document-hide {
+            opacity: 1;
+        }
+
+        #document-location {
+            overflow: hidden;
+            padding: 2px 0px 2px 32px;
+            font-family: Segoe UI, Tahoma, Lucida Grande, Cantarell;
+            font-size: 0.8em;
+            color: #444;
+            white-space: nowrap;
+            box-shadow: 0px 0px 6px rgba(192, 192, 192, .5) inset;
+            background-color: #fff;
+        }
+
+        #document,
+        #bitContainer {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+        }
+
+        #document {
+            top: 60px;
+            border: rgba(153, 153, 255, 0.85) solid 2px;
+            background-color: #fff;
+            pointer-events: none;
+        }
+
+        #window.restore #document {
+            pointer-events: auto;
+        }
+
+        #window.restore:focus #document-header {
+            border: #99f solid 2px;
+        }
+
+        #window.restore:focus #document-title {
+            background-color: #77f;
+        }
+
+        #window.restore:focus #document {
+            border: #99f solid 2px;
+        }
+    </style>
+</head>
+<body>
+<div id="window" tabindex="1" onclick="restoreWindow();">
+    <div id="document-header">
+        <div id="document-title">ENM Basic Integration Test</div>
+        <div id="document-location" contenteditable="false">http://{hostname}/#{appname}</div>
+        <div id="document-hide" tabindex="1" onclick="minimiseWindow();event.stopPropagation();">⇲</div>
+    </div>
+    <div id="document" onclick="event.stopPropagation();">
+        <div id="container">
+            <!--set stopAppAfterTest = true in test case to hide application after test!-->
+        </div>
+    </div>
+</div>
+</body>
+</html>

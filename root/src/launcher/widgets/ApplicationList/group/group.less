@@ -1,0 +1,82 @@
+.eaLauncher-ApplicationList-group {
+  padding: 0 10px;
+  margin: 0;
+  border-bottom: 1px solid @grey;
+
+  &-header {
+    font-size: 0;
+  }
+
+  &-headerText {
+    width: calc(~'100% - 50px');
+    display: inline-block;
+    font-size: 24px;
+    vertical-align: top;
+    line-height: 2rem;
+    padding: 1.2rem 0 .7rem 10px;
+    margin: 0 0 .4rem 0;
+    box-sizing: border-box;
+  }
+
+  &_ordered &-header {
+    width: 50px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  &_ordered &-content {
+    width: calc(~'100% - 55px');
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 4px;
+    vertical-align: top;
+  }
+
+  &_ordered &-content:not(:first-child) {
+    padding-top: 5px;
+  }
+
+  &-content {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 4px;
+  }
+
+  &-icon {
+    background: url('@{resources-url}/launcher/config_icon.svg');
+
+    &Holder {
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 10px;
+    }
+  }
+
+  .icon (@icon, @resources-url) {
+    &-@{icon}Icon {
+      background: url('@{resources-url}/launcher/@{icon}_icon.svg');
+      padding: 0;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .icon(~"config", @resources-url);
+  .icon(~"performance", @resources-url);
+  .icon(~"monitoring", @resources-url);
+  .icon(~"system", @resources-url);
+  .icon(~"tools", @resources-url);
+  .icon(~"security", @resources-url);
+  .icon(~"documentation", @resources-url);
+  .icon(~"troubleshooting", @resources-url);
+
+  &-borderColor {
+    border-left: 6px solid transparent;
+  }
+
+  @grey: #ebebeb;
+
+}

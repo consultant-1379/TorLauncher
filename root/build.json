@@ -1,0 +1,26 @@
+{
+    "parent": "$(parentJson)/app.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "launcher",
+        "name": "Launcher",
+        "version": "1.0.0",
+        "skeleton": "2.1.0",
+        "skeletonType": "app",
+        "buildDate": "1 Jan 1970"
+    },
+    "phases": {
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "test",
+                "compile",
+                "compress"
+            ]
+        }
+    },
+    "dependencies": {
+        "clientsdk": "1.66.2"
+    }
+}

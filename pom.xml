@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ericsson.nms</groupId>
+        <artifactId>integration</artifactId>
+        <version>15.2.0.40</version>
+    </parent>
+
+    <groupId>com.ericsson.nms.pres</groupId>
+    <artifactId>TorLauncher</artifactId>
+    <version>1.50.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Launcher Root POM</name>
+
+    <properties>
+        <jira.url>http://jira-oss.lmera.ericsson.se/browse/TORFTUI</jira.url>
+
+        <!-- Sonar config -->
+        <sonar.projectName>${project.name}</sonar.projectName>
+        <sonar.projectVersion>${project.version}</sonar.projectVersion>
+        <sonar.sources>src</sonar.sources>
+        <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
+        <sonar.host.url>https://sonarqube.lmera.ericsson.se</sonar.host.url>
+    </properties>
+
+    <modules>
+        <module>root</module>
+        <module>ENMContainerHelper</module>
+        <module>systemidentifier</module>
+        <module>plugin</module>
+        <module>rpm</module>
+        <module>launcher-pipeline</module>
+    </modules>
+
+    <scm>
+        <tag>TorLauncher-1.37.1</tag>
+    </scm>
+</project>

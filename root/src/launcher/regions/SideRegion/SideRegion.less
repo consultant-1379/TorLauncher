@@ -1,0 +1,67 @@
+.eaLauncher-SideRegion {
+  width: 360px;
+  padding-left: 20px;
+  padding-top: 20px;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+
+  &-block {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-size: cover;
+
+    &[data-name='help'],
+    &[data-name='tutorials']{
+      height: 115px;
+      font-size: 22px;
+      &, &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &[data-name='help']{
+      background-color: #00a9d4;
+    }
+
+    &[data-name='tutorials'] {
+      background-color: rgb(159, 202, 81);
+    }
+  }
+
+  &-tutorialTitle,
+  &-helpTitle{
+    border: none;
+    padding-left: 32px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  &-helpTitle{
+    padding-top: 50px;
+  }
+
+  &-tutorialTitle{
+    padding-top: 34px;
+    line-height: 24px;
+  }
+
+  &-tutorialIcon,
+  &-helpIcon {
+    position: absolute;
+    top: calc(~'50% - 14px');
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    background: url('@{resources-url}/launcher/arrowcircle.svg') no-repeat center right;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .eaLauncher-SideRegion {
+    width: 100%;
+    padding-left: 0;
+  }
+}

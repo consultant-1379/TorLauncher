@@ -1,0 +1,36 @@
+.eaLauncher-ActionBarRegion {
+
+  margin-top: 1.2rem;
+  padding: .4rem 0;
+  background-color: #e8e8e8;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+
+  &-searchHolder, &-buttonGroupHolder {
+    display: inline-block;
+    margin-left: .4rem;
+    margin-right: .4rem;
+    vertical-align: middle;
+  }
+
+  &-searchHolder {
+    max-width: 500px;
+    width: calc(~'100% - 12px');
+  }
+}
+
+@media screen and (max-width: 818px) {
+  .eaLauncher-ActionBarRegion {
+    &-searchHolder {
+      display: block;
+    }
+
+    &-buttonGroupHolder {
+      display: block;
+      padding-top: 5px;
+    }
+  }
+
+}

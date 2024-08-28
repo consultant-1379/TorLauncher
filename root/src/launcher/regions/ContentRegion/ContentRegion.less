@@ -1,0 +1,28 @@
+.eaLauncher-ContentRegion {
+  width: calc(~'100% - 360px');
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  &-appListHolder {
+
+    &-appListContent {
+      &_hidden {
+        display: none;
+      }
+    }
+
+    &-loadingAnimation {
+      text-align: center;
+      margin: 32px auto;
+
+      &_hidden {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    width: 100%;
+  }
+}

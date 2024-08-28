@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ericsson.nms.pres</groupId>
+        <artifactId>TorLauncher</artifactId>
+        <version>1.50.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.ericsson.nms.pres</groupId>
+    <artifactId>launcher</artifactId>
+    <version>1.50.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Launcher</name>
+
+    <properties>
+        <cdt-build.path>/proj/ciexadm200/tools/node/node-v12.6.0-linux-x64/bin/cdt-build</cdt-build.path>
+        <npm>/proj/ciexadm200/tools/node/node-v12.6.0-linux-x64/bin/npm</npm>
+        <node>/proj/ciexadm200/tools/node/node-v12.6.0-linux-x64/bin/node</node>
+        <timestamp>${maven.build.timestamp}</timestamp>
+        <maven.build.timestamp.format>d MMM yyyy</maven.build.timestamp.format>
+
+        <sonar.tests>test</sonar.tests>
+        <sonar.javascript.lcov.reportPaths>target/reports/unit/jscover.lcov,target/reports/bit/jscover.lcov</sonar.javascript.lcov.reportPaths>
+        <sonar.javascript.lcov.reportPath>target/reports/unit/jscover.lcov</sonar.javascript.lcov.reportPath>
+        <sonar.javascript.lcov.itReportPath>target/reports/bit/jscover.lcov</sonar.javascript.lcov.itReportPath>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <id>run_build</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>${node}</executable>
+                            <arguments>
+                                <argument>${cdt-build.path}</argument>
+                                <argument>--no-color</argument>
+                                <argument>--prop-version</argument>
+                                <argument>${project.version}</argument>
+                                <argument>--prop-buildDate</argument>
+                                <argument>${timestamp}</argument>
+                                <argument>--prop-node</argument>
+                                <argument>${node}</argument>
+                                <argument>--use-external-phantomjs</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.7</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <id>parse-version</id>
+                        <goals>
+                            <goal>parse-version</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>attach_tgz</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>attach-artifact</goal>
+                        </goals>
+                        <configuration>
+                            <artifacts>
+                                <artifact>
+                                    <file>target/${project.artifactId}-${project.version}.tar.gz</file>
+                                    <type>tar.gz</type>
+                                </artifact>
+                            </artifacts>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
